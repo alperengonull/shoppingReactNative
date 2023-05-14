@@ -24,6 +24,8 @@ import axios from "axios";
         fetchData();
     },[])
 
+    console.log('Data:', data);
+
     return (error,loading,data);
   }
 
