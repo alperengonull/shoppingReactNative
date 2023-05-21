@@ -1,17 +1,22 @@
-import { SafeAreaView,View, Text,Image } from 'react-native'
-import React from 'react'
-import styles from './ProductCard.style'
+import {SafeAreaView, View, Text, Image,TouchableWithoutFeedback} from 'react-native';
+import React from 'react';
+import styles from './ProductCard.style';
 
-const ProductCard = ({product}) => {
+const ProductCard = ({product,onSelect}) => {
+
+  
+
   return (
-    <SafeAreaView style={styles.container}>
-    <Image style={styles.image} source={{uri: product.image}} />
-    <View style={styles.body_container}>
-    <Text style={styles.title}> {product.title} </Text>
-    <Text style={styles.price}> {product.price} TL </Text>
-    </View>
+    <TouchableWithoutFeedback onPress={onSelect}>
+       <SafeAreaView style={styles.container}>
+      <Image style={styles.image} source={{uri: product.image}} />
+      <View style={styles.body_container}>
+        <Text style={styles.title}> {product.title} </Text>
+        <Text style={styles.price}> {product.price} TL </Text>
+      </View>
     </SafeAreaView>
-  )
-}
+    </TouchableWithoutFeedback>
+  );
+};
 
-export default ProductCard
+export default ProductCard;

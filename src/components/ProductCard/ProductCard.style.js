@@ -2,32 +2,30 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   container: {
-    backgroundColor: '#FFFFFF',
-    borderRadius: 10,
-    marginHorizontal: 16,
-    marginVertical: 8,
-    overflow: 'hidden',
-    elevation: 5,
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ccc',
   },
   image: {
-    width: '100%',
-    height: 200,
-    resizeMode: 'contain',
+    width: 80,
+    height: 80,
+    marginRight: 10,
+    resizeMode:'contain'
   },
   body_container: {
-    padding: 16,
+    flex: 1,
+    padding:20,
   },
   title: {
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: 'bold',
-    color: '#333333',
-    marginBottom: 8,
-    textAlign: 'center',
   },
   price: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: '#B12704',
-    textAlign: 'center',
+    fontSize: 14,
+    color: '#f00',
+    marginTop: 5,
   },
 });
+
